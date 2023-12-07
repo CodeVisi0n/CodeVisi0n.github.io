@@ -21,16 +21,24 @@ body {
     margin-bottom: 20px;
 }
 
-.loading-spinner {
-    border: 8px solid #333;
-    border-top: 8px solid #00bcd4;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    animation: spin 1s linear infinite;
+.loading-bar-container {
+    width: 200px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+.loading-bar {
+    width: 0;
+    height: 100%;
+    background-color: #00bcd4;
+    border-radius: 10px;
+    animation: progress 3s ease-in-out infinite;
+}
+
+@keyframes progress {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
 }
