@@ -1,60 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CodeVision</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
+
 <body>
 
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#projects">Our Projects</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
 
-    <div class = "loader loader--hidden"></div>
-    
     <div class="container">
-        <section>
-
+        <section id="home">
             <div class="content">
-                <h2>Home</h2>
+                <h2>Welcome to CodeVision</h2>
                 <p>
-                    Welcome To CodeVision
+                    We are a freelance company specializing in creating websites and software solutions for individuals and businesses. Our goal is to bring your ideas to life by delivering high-quality and custom-tailored solutions that meet your unique needs. Whether you're a small business looking for an online presence or an individual with a specific software requirement, we've got you covered.
+                </p>
             </div>
- 
         </section>
 
-        <section>
-            
+        <section id="about">
             <div class="content">
                 <h2>About us</h2>
-                <p>
-                    .                
-                </p>
+                <p>.</p>
             </div>
-
         </section>
 
-        <section>
-           
+        <section id="projects">
             <div class="content">
                 <h2>Our projects</h2>
-                <p>
-                    .
+                <p>.</p>
             </div>
-
         </section>
 
-        <section>
-            
+        <section id="contact">
             <div class="content">
-                <h2>Contact us </h2>
-                <p>
-                   . 
-                </p>
+                <h2>Contact us</h2>
+                <p>.</p>
             </div>
-
         </section>
     </div>
 
+    <script>
+        // Smooth scrolling functionality
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetSection = document.querySelector(this.getAttribute('href'));
+
+                // Check if the target section exists
+                if (targetSection) {
+                    e.preventDefault();
+
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    // Remove 'active' class from all links
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+
+                    // Add 'active' class to the clicked link
+                    this.classList.add('active');
+                }
+            });
+        });
+    </script>
+
 </body>
+
 </html>
