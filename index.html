@@ -3,40 +3,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@200&display=swap" rel="stylesheet">
     <title>CodeVision</title>
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="loading-container">
-        <div class="loading-text">CodeVision</div>
-        <div class="loading-bar-container">
-            <div class="loading-bar"></div>
-        </div>
+<!-- Loading Page -->
+<div id="loadingPage">
+    <div class="loading-content">
+        <h1>CodeVision</h1>
+        <div class="loading-bar"></div>
     </div>
+</div>
 
-    <div class="landing-container" id="landing-page">
-        <div class="landing-text">
-            <h1>Welcome to CodeVision</h1>
-            <p>We are a team of passionate developers crafting digital solutions.</p>
-            <p>From web development to software, we bring ideas to life.</p>
-            <p>Empower your business with our innovative technology solutions.</p>
-        </div>
-    </div>
+<!-- Home Page -->
+<div id="homePage" class="page">
+    <h2>Welcome to CodeVision</h2>
+    <p>We create websites and software for individuals, businesses, and companies.</p>
+</div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.body.style.overflow = "hidden"; // Disable scrolling during loading
-            setTimeout(function() {
-                document.getElementById("landing-page").style.opacity = 1;
-                document.querySelector(".loading-container").style.display = "none";
-                document.body.style.overflow = "visible"; // Enable scrolling after loading
-            }, 1500); // Adjust the timeout based on your loading time
+<!-- About Us Page -->
+<div id="aboutPage" class="page">
+    <h2>About Us</h2>
+    <p>This is where you describe your team and their expertise.</p>
+</div>
+
+<!-- Projects Page -->
+<div id="projectsPage" class="page">
+    <h2>Our Projects</h2>
+    <p>Showcase your work and projects here.</p>
+</div>
+
+<!-- Contact Page -->
+<div id="contactPage" class="page">
+    <h2>Contact Us</h2>
+    <p>Find us on social media.</p>
+</div>
+
+<!-- Menu Bar -->
+<div id="menuBar">
+    <a href="#homePage">Home</a>
+    <a href="#aboutPage">About</a>
+    <a href="#projectsPage">Projects</a>
+    <a href="#contactPage">Contact</a>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Hide loading page on load
+    document.getElementById("loadingPage").style.display = "none";
+
+    // Show home page
+    document.getElementById("homePage").style.display = "block";
+
+    // Scroll to section function
+    function scrollToSection(sectionId) {
+        const targetSection = document.getElementById(sectionId);
+        const targetOffset = targetSection.offsetTop;
+        window.scrollTo({
+            top: targetOffset,
+            behavior: "smooth"
         });
-    </script>
+    }
+
+    // Add click event listeners to menu links
+    const menuLinks = document.querySelectorAll("#menuBar a");
+
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            scrollToSection(targetId);
+        });
+    });
+
+    // Add scroll event listener for snapping effect
+    let isScrolling = false;
+
+    document.addEventListener("scroll", function () {
+        if (!isScrolling) {
+            isScrolling = true;
+
+            setTimeout(function () {
+                isScrolling = false;
+                snapToSection();
+            }, 100);
+        }
+    });
+
+    function snapToSection() {
+        const sections = document.querySelectorAll('.page');
+        const scrollPosition = window.scrollY;
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 50; // Adjust offset as needed
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    }
+});
+</script>
 
 </body>
 </html>
