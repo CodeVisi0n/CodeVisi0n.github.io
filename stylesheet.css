@@ -1,8 +1,5 @@
-/* styles.css */
-
 body {
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -15,19 +12,20 @@ body {
 }
 
 .loading-text {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-family: 'Barlow', sans-serif;
+    font-size: 23.5px;
     font-weight: bold;
     color: #f8ece7;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .loading-bar-container {
     width: 120px;
-    height: 6px; 
+    height: 6px;
     background-color: #393939;
     border-radius: 3px;
     overflow: visible;
+    margin: 20px;
 }
 
 .loading-bar {
@@ -35,19 +33,11 @@ body {
     height: 100%;
     background-color: #ff8c42;
     border-radius: 0;
-    animation: progress 4s cubic-bezier(0.4, 0, 0.2, 1) infinite; /* Increased duration */
+    animation: progress 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes progress {
     0% { width: 0; }
     50% { width: 100%; }
     100% { width: 0; }
-}
-
-.coming-soon-text {
-    font-family: 'Cursive', sans-serif;
-    font-size: 24px;
-    font-weight: bold;
-    color: #ffcc66;
-    margin-top: 20px;
 }
