@@ -1,55 +1,49 @@
-/* Loading Page Styles */
-#loadingPage {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    z-index: 999;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeVision</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-.loading-content {
-    text-align: center;
-}
+<!-- Loading Page -->
+<div id="loadingPage">
+    <div class="loading-content">
+        <h1>CodeVision</h1>
+        <div class="loading-bar"></div>
+    </div>
+</div>
 
-.loading-bar {
-    width: 50px;
-    height: 5px;
-    background: #87CEEB; /* Dreamy color */
-}
+<!-- Home Page -->
+<div id="homePage" class="page">
+    <h2>Welcome to CodeVision</h2>
+    <p>We create websites and software for individuals, businesses, and companies.</p>
+</div>
 
-/* Home Page Styles */
-#homePage {
-    background: #f4f4f4;
-    padding: 50px;
-}
+<!-- About Us Page -->
+<div id="aboutPage" class="page">
+    <h2>About Us</h2>
+    <p>This is where you describe your team and their expertise.</p>
+</div>
 
-/* Other Page Styles */
-.page {
-    display: none;
-    background: #fff;
-    padding: 50px;
-}
+<!-- Projects Page -->
+<div id="projectsPage" class="page">
+    <h2>Our Projects</h2>
+    <p>Showcase your work and projects here.</p>
+</div>
 
-/* Menu Bar Styles */
-#menuBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #333;
-    padding: 10px;
-    text-align: center;
-}
+<!-- Contact Page -->
+<div id="contactPage" class="page">
+    <h2>Contact Us</h2>
+    <p>Find us on social media.</p>
+</div>
 
-#menuBar a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    cursor: pointer;
-}
+<!-- Menu Bar -->
+<div id="menuBar">
+    <a href="#homePage">Home</a>
+    <a href="#aboutPage">About</a>
+    <a href="#projectsPage">Projects</a>
+    <a href="#contactPage">Contact</a>
+</div>
