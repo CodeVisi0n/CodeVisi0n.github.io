@@ -19,15 +19,15 @@ body {
 }
 
 .loading-text {
-    font-family: 'Barlow', sans-serif;
-    font-size: 21px;
+    font-family: 'Cursive', sans-serif;
+    font-size: 20px;
     font-weight: bold;
     color: #f8ece7;
     margin-bottom: 5px;
 }
 
 .loading-bar-container {
-    width: 100px;
+    width: 120px;
     height: 6px;
     background-color: #393939;
     border-radius: 3px;
