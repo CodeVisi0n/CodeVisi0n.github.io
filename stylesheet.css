@@ -27,7 +27,7 @@ body {
 }
 
 .loading-bar-container {
-    width: 110px;
+    width: 100px;
     height: 6px;
     background-color: #393939;
     border-radius: 3px;
