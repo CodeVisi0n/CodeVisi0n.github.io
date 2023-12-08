@@ -3,22 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Dancing+Script&family=Noto+Sans+Vithkuqi:wght@600&family=Playfair+Display&family=Raleway:wght@200&family=Roboto:wght@100;300&display=swap" rel="stylesheet">
-
+    <title>CodeVision</title>
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
 
     <div class="loading-container">
-        <div class="loading-text">Code Vision</div>
+        <div class="loading-text">CodeVision</div>
         <div class="loading-bar-container">
             <div class="loading-bar"></div>
         </div>
     </div>
 
+    <div class="landing-container" id="landing-page">
+        <div class="landing-text">
+            <h1>Welcome to CodeVision</h1>
+            <p>We create websites and software for businesses and individuals.</p>
+            <p>Let us turn your ideas into reality with innovative solutions.</p>
+        </div>
+    </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.overflow = "hidden"; // Disable scrolling during loading
+            setTimeout(function() {
+                document.getElementById("landing-page").style.opacity = 1;
+                document.querySelector(".loading-container").style.display = "none";
+                document.body.style.overflow = "visible"; // Enable scrolling after loading
+            }, 3000); // Adjust the timeout based on your loading time
+        });
+    </script>
 
 </body>
 </html>
