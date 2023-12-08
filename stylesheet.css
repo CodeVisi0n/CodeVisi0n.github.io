@@ -67,14 +67,14 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 8px 12px; /* Adjusted padding for smaller screens */
     border-radius: 5px;
     transition: background 0.3s ease;
 }
@@ -86,4 +86,12 @@ nav ul li a:hover {
 /* Additional styles for active navigation item */
 nav ul li a.active {
     background: #555;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 768px) {
+    nav ul li a {
+        padding: 6px 10px; /* Adjusted padding for smaller screens */
+        font-size: 14px; /* Adjusted font size for smaller screens */
+    }
 }
