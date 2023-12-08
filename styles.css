@@ -1,55 +1,90 @@
-/* Loading Page Styles */
-#loadingPage {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    z-index: 999;
+body {
+    margin: 0;
 }
 
-.loading-content {
+.loading-container,
+.landing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.loading-container {
+    flex-direction: column;
     text-align: center;
+    background-color: #262626;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.loading-text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 21px;
+    font-weight: bold;
+    color: #f8ece7;
+    margin-bottom: 5px;
+}
+
+.loading-bar-container {
+    width: 100px;
+    height: 6px;
+    background-color: #393939;
+    border-radius: 3px;
+    overflow: visible;
+    margin: 10px 0;
 }
 
 .loading-bar {
-    width: 50px;
-    height: 5px;
-    background: #87CEEB; /* Dreamy color */
+    width: 0;
+    height: 100%;
+    background-color: #ff8c42;
+    border-radius: 0;
+    animation: progress 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
-/* Home Page Styles */
-#homePage {
-    background: #f4f4f4;
-    padding: 50px;
-}
-
-/* Other Page Styles */
-.page {
-    display: none;
-    background: #fff;
-    padding: 50px;
-}
-
-/* Menu Bar Styles */
-#menuBar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background: #333;
-    padding: 10px;
+.landing-container {
     text-align: center;
+    background-color: #f8ece7;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
 }
 
-#menuBar a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
-    cursor: pointer;
+.landing-text {
+    font-family: 'Roboto', sans-serif;
+    color: #262626;
+    animation: complexAnimation 2s ease-in-out;
+}
+
+.landing-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.landing-text p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+@keyframes progress {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}
+
+@keyframes complexAnimation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
