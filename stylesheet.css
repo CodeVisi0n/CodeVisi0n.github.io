@@ -1,22 +1,29 @@
 body {
+    margin: 0;
+}
+
+.loading-container,
+.landing-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    margin: 0;
-    background-color: #262626;
 }
 
 .loading-container {
+    flex-direction: column;
     text-align: center;
+    background-color: #262626;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
 }
 
 .loading-text {
-    font-family: 'Barlow', sans-serif;
-    font-size: 23.5px;
+    font-family: 'Cursive', sans-serif;
+    font-size: 20px;
     font-weight: bold;
     color: #f8ece7;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .loading-bar-container {
@@ -25,7 +32,7 @@ body {
     background-color: #393939;
     border-radius: 3px;
     overflow: visible;
-    margin: 20px;
+    margin: 10px 0;
 }
 
 .loading-bar {
@@ -34,6 +41,28 @@ body {
     background-color: #ff8c42;
     border-radius: 0;
     animation: progress 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.landing-container {
+    text-align: center;
+    background-color: #f8ece7;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.landing-text {
+    font-family: 'Roboto', sans-serif;
+    color: #262626;
+}
+
+.landing-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.landing-text p {
+    font-size: 18px;
+    margin-bottom: 15px;
 }
 
 @keyframes progress {
