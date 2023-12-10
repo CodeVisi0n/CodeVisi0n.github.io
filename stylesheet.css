@@ -31,7 +31,7 @@ p {
 
 .container section {
     height: 100vh;
-    background: #eee;
+    background: #8B0000;
     color: #FFEBCD;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@ p {
 }
 
 .container section:nth-of-type(2n) {
-    background: #222;
+    background: #2F4F4F;
     color: #DEB887;
 }
 
@@ -55,7 +55,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background: #333;
+    background: #696969;
     padding: 15px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -80,7 +80,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #555;
+    background: #2F4F4F;
 }
 
 /* Additional styles for active navigation item */
