@@ -32,7 +32,7 @@ p {
 .container section {
     height: 100vh;
     background: #eee;
-    color: #222;
+    color: #FFEBCD;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,7 +47,7 @@ p {
 
 .container section:nth-of-type(2n) {
     background: #222;
-    color: #fff;
+    color: #DEB887;
 }
 
 nav {
@@ -72,7 +72,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
+    color: #5F9EA0;
     font-weight: bold;
     padding: 8px 12px; /* Adjusted padding for smaller screens */
     border-radius: 5px;
