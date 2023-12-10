@@ -72,7 +72,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #5F9EA0;
+    color: #DCDCDC;
     font-weight: bold;
     padding: 8px 12px; /* Adjusted padding for smaller screens */
     border-radius: 5px;
@@ -126,7 +126,7 @@ nav ul li a.active {
   
   .inner-headings span {
     position: relative;
-    color: rgb(190, 147, 71);
+    color: #A52A2A;
     animation: animation 10s ease infinite;
   }
   
