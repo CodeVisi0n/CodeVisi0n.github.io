@@ -31,7 +31,7 @@ p {
 
 .container section {
     height: 100vh;
-    background: #8B0000;
+    background: #222;
     color: #FFEBCD;
     display: flex;
     align-items: center;
@@ -46,7 +46,7 @@ p {
 }
 
 .container section:nth-of-type(2n) {
-    background: #2F4F4F;
+    background: #333;
     color: #DEB887;
 }
 
@@ -80,7 +80,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: #2F4F4F;
+    background: #333;
 }
 
 /* Additional styles for active navigation item */
