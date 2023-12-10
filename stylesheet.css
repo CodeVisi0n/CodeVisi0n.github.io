@@ -32,7 +32,7 @@ p {
 .container section {
     height: 100vh;
     background: #222;
-    color: #FFEBCD;
+    color: #CD5C5C;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,7 +55,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    background: #696969;
+    background: #333;
     padding: 15px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -126,7 +126,7 @@ nav ul li a.active {
   
   .inner-headings span {
     position: relative;
-    color: #A52A2A;
+    color: #C0C0C0;
     animation: animation 10s ease infinite;
   }
   
