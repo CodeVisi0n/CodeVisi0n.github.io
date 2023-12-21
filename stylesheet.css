@@ -19,7 +19,7 @@ p {
 
 .container h2 {
   margin: 32px 0;
-  font-size: 60px;
+  font-size: 4vw; /* Adjusted font size for responsiveness */
   font-weight: 800;
 }
 
@@ -74,7 +74,7 @@ nav ul li a {
   text-decoration: none;
   color: #DCDCDC;
   font-weight: bold;
-  padding: 8px 12px; /* Adjusted padding for smaller screens */
+  padding: 8px 12px;
   border-radius: 5px;
   transition: background 0.3s ease;
 }
@@ -88,21 +88,6 @@ nav ul li a.active {
   background: #555;
 }
 
-/* Media query for smaller screens */
-@media only screen and (max-width: 768px) {
-  nav ul li a {
-      padding: 6px 10px; /* Adjusted padding for smaller screens */
-      font-size: 14px; /* Adjusted font size for smaller screens */
-  }
-}
-
-
-* {
-  font-family: sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
 .outer-headings {
   height: 100vh;
   display: flex;
@@ -112,14 +97,14 @@ nav ul li a.active {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 4vw; /* Adjusted font size for responsiveness */
 }
 
 .inner-headings {
   border: 0px solid #ddd;
-  height: 50px;
-  line-height: 50px;
-  font-size: 45px;
+  height: 5vw; /* Adjusted height for responsiveness */
+  line-height: 5vw; /* Adjusted line-height for responsiveness */
+  font-size: 4vw; /* Adjusted font size for responsiveness */
   text-transform: uppercase;
   overflow: hidden;
 }
@@ -127,33 +112,73 @@ h1 {
 .inner-headings span {
   position: relative;
   color: #C0C0C0;
-  animation: animation 10s ease infinite;
+  animation: animation 10s linear infinite;
 }
 
 @keyframes animation {
-  0%,
-  100% {
+  0%, 100% {
     top: 0;
   }
   20% {
     top: 0;
   }
   25% {
-    top: -50px;
+    top: -5vw; /* Adjusted value for responsiveness */
   }
   45% {
-    top: -50px;
+    top: -5vw; /* Adjusted value for responsiveness */
   }
   50% {
-    top: -100px;
+    top: -10vw; /* Adjusted value for responsiveness */
   }
   70% {
-    top: -100px;
+    top: -10vw; /* Adjusted value for responsiveness */
   }
-  75% {
-    top: -150px;
+}
+
+/* Media query for smaller screens */
+@media only screen and (max-width: 600px) {
+  nav ul li a {
+    padding: 6px 10px;
+    font-size: 14px;
   }
-  95% {
-    top: -150px;
+
+  .container h2 {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+  }
+
+  h1 {
+    font-size: 24px; /* Adjusted font size for smaller screens */
+  }
+
+  .inner-headings {
+    height: 30px; /* Adjusted height for smaller screens */
+    line-height: 30px; /* Adjusted line-height for smaller screens */
+    font-size: 20px; /* Adjusted font size for smaller screens */
+  }
+
+  .inner-headings span {
+    animation: animation-smaller 10s linear infinite;
+  }
+
+  @keyframes animation-smaller {
+    0%, 100% {
+      top: 0;
+    }
+    20% {
+      top: 0;
+    }
+    25% {
+      top: -30px; /* Adjusted value for smaller screens */
+    }
+    45% {
+      top: -30px; /* Adjusted value for smaller screens */
+    }
+    50% {
+      top: -60px; /* Adjusted value for smaller screens */
+    }
+    70% {
+      top: -60px; /* Adjusted value for smaller screens */
+    }
   }
 }
