@@ -86,6 +86,27 @@
                 }
             });
         });
+
+        // Add scroll animation when navigating to the next section
+        document.addEventListener('scroll', function () {
+            const navLinks = document.querySelectorAll('nav a');
+            
+            // Loop through each nav link
+            navLinks.forEach(link => {
+                const sectionId = link.getAttribute('href').substring(1);
+                const section = document.getElementById(sectionId);
+
+                if (section) {
+                    const rect = section.getBoundingClientRect();
+
+                    // Add 'active' class to the link when its section is in the viewport
+                    if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                }
+            });
+        });
     </script>
 
 </body>
