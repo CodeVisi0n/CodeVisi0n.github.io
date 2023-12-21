@@ -37,16 +37,8 @@ p {
   align-items: center;
   justify-content: center;
   scroll-snap-align: start;
-  animation:fade-in 1s ease-out; /* Added fade-in animation */
 }
-@keyframes fade-in {
-  from{
-    opacity:0;
-  }
-    to{
-  opacity:1;
-    }
-}
+
 .container section .content {
   max-width: 800px;
   text-align: center;
@@ -76,36 +68,24 @@ nav ul {
 
 nav ul li {
   margin-right: 10px;
-  animation: bounce 1s ease infinite; /* Added bounce animation */
 }
-@keyframes bounce{
-  0%, 20%, 50%, 80%, 100%;{
-    trnasform: translateY(0);
-40%{
-  transform: translateY(-10px);
-}
-  60%{
-    transform: translateY(-5px);
-  }
-}
+
 nav ul li a {
   text-decoration: none;
   color: #DCDCDC;
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 5px;
-  transition: background 0.3s ease, transform 0.3s ease; /* Added transform property */
-} 
+  transition: background 0.3s ease;
+}
 
 nav ul li a:hover {
   background: #333;
-  transform: scale(1.1); /* Added scale transformation on hover */
 }
 
 /* Additional styles for active navigation item */
 nav ul li a.active {
   background: #555;
-   transform: scale(1.1); /* Added scale transformation for active state */
 }
 
 .outer-headings {
