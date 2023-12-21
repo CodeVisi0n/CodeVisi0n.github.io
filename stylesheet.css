@@ -56,7 +56,7 @@ p {
 
 .container section:nth-of-type(2n) {
   background: #333;
-  color: #DEB887;
+  color: #BDB76B;
 }
 
 nav {
@@ -93,7 +93,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #DCDCDC;
+  color: #A9A9A9;
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 5px;
@@ -134,7 +134,7 @@ h1 {
 
 .inner-headings span {
   position: relative;
-  color: #C0C0C0;
+  color: #2F4F4F;
   animation: animation 10s linear infinite;
 }
 
