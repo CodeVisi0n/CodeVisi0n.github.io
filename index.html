@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CodeVision</title>
     <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        body {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 <body>
@@ -25,14 +30,14 @@
             <div class="content">
                 <div class="outer-headings">
                     <h1>
-                      Welcome to CodeVision 👋, We are
-                      <div class="inner-headings">
-                        <span>
-                          Web Developers <br />
-                          Software Developers <br />
-                          Students <br />
-                        </span>
-                       </div>
+                        Welcome to CodeVision 👋, We are
+                        <div class="inner-headings">
+                            <span>
+                                Web Developers <br />
+                                Software Developers <br />
+                                Students <br />
+                            </span>
+                        </div>
                     </h1>
                 </div>
             </div>
@@ -41,8 +46,11 @@
         <section id="about">
             <div class="content">
                 <h2>About us</h2>
-                <p>                   
-                    We are a freelance company specializing in creating websites and software solutions for individuals and businesses. Our goal is to bring your ideas to life by delivering high-quality and custom-tailored solutions that meet your unique needs. Whether you're a small business looking for an online presence or an individual with a specific software requirement, we've got you covered.
+                <p>
+                    We are a freelance company specializing in creating websites and software solutions for individuals
+                    and businesses. Our goal is to bring your ideas to life by delivering high-quality and custom-tailored
+                    solutions that meet your unique needs. Whether you're a small business looking for an online presence
+                    or an individual with a specific software requirement, we've got you covered.
                 </p>
             </div>
         </section>
@@ -63,12 +71,10 @@
     </div>
 
     <script>
-        // Smooth scrolling functionality
         document.querySelectorAll('nav a').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const targetSection = document.querySelector(this.getAttribute('href'));
 
-                // Check if the target section exists
                 if (targetSection) {
                     e.preventDefault();
 
@@ -76,13 +82,31 @@
                         behavior: 'smooth'
                     });
 
-                    // Remove 'active' class from all links
                     document.querySelectorAll('nav a').forEach(link => {
                         link.classList.remove('active');
                     });
 
-                    // Add 'active' class to the clicked link
                     this.classList.add('active');
+                }
+            });
+        });
+
+        document.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY;
+
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 50;
+                const sectionBottom = sectionTop + section.offsetHeight;
+
+                if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                    document.querySelectorAll('nav a').forEach(link => {
+                        link.classList.remove('active');
+                    });
+
+                    const correspondingLink = document.querySelector(`nav a[href="#${section.id}"]`);
+                    if (correspondingLink) {
+                        correspondingLink.classList.add('active');
+                    }
                 }
             });
         });
