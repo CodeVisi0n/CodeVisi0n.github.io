@@ -57,7 +57,7 @@ p {
 
 .container section:nth-of-type(2n) {
   background: #AFEEEE;
-  color: #BDB76B;
+  color: #6B8E23;
 }
 
 nav {
@@ -95,7 +95,7 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: #A9A9A9;
+  color: CD853F#;
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 5px;
@@ -103,7 +103,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  background: #333;
+  background: #EEE8AA;
   transform: scale(1.1);
 }
 
