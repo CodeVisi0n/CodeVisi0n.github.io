@@ -31,8 +31,8 @@ p {
 
 .container section {
   height: 100vh;
-  background: #222;
-  color: #F0F8FF;
+  background:#191970;
+  color:#F0F8FF;
   display: flex;
   align-items: center;
   justify-content: center;
