@@ -31,22 +31,12 @@ p {
 
 .container section {
   height: 100vh;
-  background:#D2B48C;
-  color:#F0F8FF;
+  background: #222;
+  color: #CD5C5C;
   display: flex;
   align-items: center;
   justify-content: center;
   scroll-snap-align: start;
-  animation: fade-in 1s ease-out; /* Added fade-in animation */
-  transition: background 0.5s ease; /* Added background transition*/
-}
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 2;
-  }
 }
 
 .container section .content {
@@ -56,8 +46,8 @@ p {
 }
 
 .container section:nth-of-type(2n) {
-  background: #AFEEEE;
-  color: #6B8E23;
+  background: #333;
+  color: #DEB887;
 }
 
 nav {
@@ -65,7 +55,7 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: #AFEEEE;
+  background: #333;
   padding: 15px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -78,39 +68,24 @@ nav ul {
 
 nav ul li {
   margin-right: 10px;
-  animation: bounce 1s ease infinite; /* Added bounce animation */
-  transition: transform 0.3s ease; /* Added transform transition */
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
 }
 
 nav ul li a {
   text-decoration: none;
-  color: CD853F#;
+  color: #DCDCDC;
   font-weight: bold;
   padding: 8px 12px;
   border-radius: 5px;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: background 0.3s ease;
 }
 
 nav ul li a:hover {
-  background: #EEE8AA;
-  transform: scale(1.1);
+  background: #333;
 }
 
 /* Additional styles for active navigation item */
 nav ul li a.active {
   background: #555;
-  transform: scale(1.1);
 }
 
 .outer-headings {
@@ -132,12 +107,11 @@ h1 {
   font-size: 4vw; /* Adjusted font size for responsiveness */
   text-transform: uppercase;
   overflow: hidden;
-  transition: border 0.5s ease; /* Added border transition */
 }
 
 .inner-headings span {
   position: relative;
-  color: #2F4F4F;
+  color: #C0C0C0;
   animation: animation 10s linear infinite;
 }
 
