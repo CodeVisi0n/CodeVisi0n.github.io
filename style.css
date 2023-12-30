@@ -267,13 +267,7 @@ body {
   }
 
 
-#email{
-	color: aliceblue;
-	position: absolute;
-	
-	left: 42%;
-	transform: translate(-50%, -50%);
-}
+
   
   
   
@@ -479,10 +473,10 @@ body {
 }
 
 #contact .contact {
-    min-height: 200px;
+    min-height: 250px; /* Adjusted the min-height for more space */
     flex-direction: column;
     padding-top: 50px;
-    padding-bottom: 10px;
+    padding-bottom: 20px; /* Adjusted padding for more space */
     width: 100%;
     box-sizing: border-box;
 }
@@ -490,10 +484,10 @@ body {
 #contact h2 {
     color: white;
     font-weight: 500;
-    font-size: 1.8rem;
+    font-size: 2rem; /* Increased font size for better visibility */
     letter-spacing: 0.1rem;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Adjusted margin for more space */
 }
 
 #contact .social-icon {
@@ -516,9 +510,19 @@ body {
     filter: grayscale(0);
 }
 
+#contact #email {
+    color: white;
+    font-size: 1.2rem; /* Adjusted font size for email section */
+    margin-bottom: 20px; /* Added margin for separation */
+}
+
+#contact #email p {
+    margin: 5px 0;
+}
+
 #contact p {
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.2rem; /* Adjusted font size for the copyright notice */
 }
 /* End contact */
 
