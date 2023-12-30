@@ -2,92 +2,179 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeVision</title>
-    <link rel="stylesheet" href="stylesheet.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>CodeVision</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
 </head>
 
+
+
 <body>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#home">
+            <h1><span>C</span>ode <span>V</span>ision</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="navbar">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#home" data-after="Home">Home</a></li>
+            <li><a href="#services" data-after="Service">Services</a></li>
+            <li><a href="#projects" data-after="Projects">Projects</a></li>
+            <li><a href="#about" data-after="About">About</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
 
-    <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#projects">Our Projects</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-        </ul>
-    </nav>
 
-    <div class="container">
-        <section id="home">
-            <div class="content">
-                <div class="outer-headings">
-                    <h1>
-                      Welcome to CodeVision 👋, We are
-                      <div class="inner-headings">
-                        <span>
-                          Web Developers <br />
-                          Software Developers <br />
-                          App Developers <br />
-                        </span>
-                       </div>
-                    </h1>
-                </div>
-            </div>
-        </section>
+  <!-- home Section  -->
+  <section id="home">
+    <div class="home container">
 
-        <section id="about">
-            <div class="content">
-                <h2>About us</h2>
-                <p>                   
-                    We are a freelance company specializing in creating websites and software solutions for individuals and businesses. Our goal is to bring your ideas to life by delivering high-quality and custom-tailored solutions that meet your unique needs. Whether you're a small business looking for an online presence or an individual with a specific software requirement, we've got you covered.
-                </p>
-            </div>
-        </section>
+      <div id="blob" data-aos="fade-right" data-aos-easing="ease-in-out">
+        <svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+          <g transform="translate(466.769730052984 309.445206253046)">
+            <path id="blob1"
+              d="M133.1 -113.6C177.6 -88.6 222.3 -44.3 221.3 -1.1C220.2 42.2 173.4 84.4 128.9 113C84.4 141.7 42.2 156.9 -2.1 159C-46.4 161.1 -92.9 150.2 -141.2 121.5C-189.5 92.9 -239.8 46.4 -251.9 -12.1C-264 -70.7 -238.1 -141.4 -189.8 -166.4C-141.4 -191.4 -70.7 -170.7 -13.2 -157.5C44.3 -144.3 88.6 -138.6 133.1 -113.6"
+              fill="#4FACF7"></path>
+          </g>
 
-        <section id="projects">
-            <div class="content">
-                <h2>Our Projects</h2>
-                <p>Coming Soon</p>
-            </div>
-        </section>
-
-        <section id="contact">
-            <div class="content">
-                <h2>Contact us</h2>
-                <p>Coming Soon</p>
-            </div>
-        </section>
+          <g transform="translate(468.06944203776965 330.7483018991858)">
+            <path id ="blob2" 
+            style="visibility: hidden" 
+            d="M118.8 -128.3C157.5 -80.1 194.7 -40.1 209 14.3C223.3 68.6 214.5 137.2 175.8 162.2C137.2 187.2 68.6 168.6 6.5 162.1C-55.6 155.6 -111.3 161.3 -161.3 136.3C-211.3 111.3 -255.6 55.6 -251.3 4.4C-246.9 -46.9 -193.8 -93.8 -143.8 -142C-93.8 -190.1 -46.9 -239.6 -3.4 -236.2C40.1 -232.7 80.1 -176.5 118.8 -128.3" fill="#4FACF7"></path></g>
+        </svg>
+      </div>
+      <div>
+        <h1>Hello, <span></span></h1>
+        <h1>We are<span></span></h1>
+        <h1>CodeVision <span></span></h1>
+      </div>
     </div>
 
-    <script>
-        // Smooth scrolling functionality
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                const targetSection = document.querySelector(this.getAttribute('href'));
+  </section>
+  <!-- End home Section  -->
 
-                // Check if the target section exists
-                if (targetSection) {
-                    e.preventDefault();
+  <!-- Service Section -->
+  <section id="services">
+    <div class="services container">
+      <div class="service-top">
+        <h1 class="section-title">Serv<span>i</span>ces</h1>
+        <p>Welcome to CodeVision - Your Premier Destination for Exceptional App and Website Development!
 
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+          At CodeVision, we pride ourselves on being a dynamic and innovative freelance company dedicated
+          to crafting cutting-edge apps and websites tailored to meet the unique needs of our clients. With
+          a team of highly skilled professionals, we strive to deliver solutions that not only meet but exceed
+          expectations.</p>
+      </div>
+      <div class="service-bottom" >
+        <div class="service-item" data-aos="fade-right" data-aos-easing="ease-in-out">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+          <h2>Custom App Dev</h2>
+          <p>Native iOS and Android Apps <br>
+            User-friendly and Intuitive Interfaces
+          </p>
+        </div>
+        <div class="service-item" data-aos="fade-right" data-aos-easing="ease-in-out"  data-aos-delay="500">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/services.png" /></div>
+          <h2>Web Dev</h2>
+          <p>
+            Responsive and Mobile-Optimized Designs <br>
+            Front-end and Back-end Development
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Service Section -->
 
-                    // Remove 'active' class from all links
-                    document.querySelectorAll('nav a').forEach(link => {
-                        link.classList.remove('active');
-                    });
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">Recent <span>Projects</span></h1>
+      </div>
+      <div class="all-projects">
+        <div class="project-item" data-aos="fade-right" data-aos-easing="ease-in-out">
+          <div class="project-info">
+            <h1>CodeVision</h1>
+            <h2>Website</h2>
+            <p>Our first project as a company mde this very Website
 
-                    // Add 'active' class to the clicked link
-                    this.classList.add('active');
-                }
-            });
-        });
-    </script>
 
+              
+            </p>
+          </div>
+          <div class="project-img">
+            <img src="ezgif-1-a9ddd30535.gif" alt="img">
+          </div>
+        </div>
+
+        <!-- End Projects Section -->
+
+        <!-- About Section -->
+        <section id="about">
+          <div class="about container">
+            <div class="col-left">
+              <div class="about-img" data-aos="fade-right" data-aos-easing="ease-in-out">
+                <img src="717917d9-f748-46c8-9352-3256a8d9ca36.jpeg" alt="img">
+              </div>
+            </div>
+            <div class="col-right">
+              <h1 class="section-title">About <span>Us</span></h1>
+              <h2>Your Vision, Our Code</h2>
+              <p> We are a freelance company specializing in creating websites and software solutions for individuals
+                and businesses. Our goal is to bring your ideas to life by delivering high-quality and custom-tailored
+                solutions that meet your unique needs. Whether you're a small business looking for an online presence or
+                an individual with a specific software requirement, we've got you covered.</p>
+            </div>
+          </div>
+        </section>
+        <!-- End About Section -->
+
+
+        <!-- contact -->
+        <section id="contact">
+          <div class="contact container">
+            <div class="brand">
+              <h1><span>C</span>ode <span>V</span>ision</h1>
+            </div>
+            <h2>Your Complete solutions</h2>
+            <div class="social-icon">
+              <div class="social-item">
+                <a href="https://www.instagram.com/codeyourvision/"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png" /></a>
+              </div>
+              <div id = "email">
+                Email: <br>
+                codevision783@gmail.com
+              </div>
+            </div>
+            <p>Copyright © 2023 CodeVision. All rights reserved</p>
+          </div>
+        </section>
+          </section>
+          
+        <!-- End contact -->
+        <script src="./app.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+          AOS.init();
+        </script>
 </body>
 
 </html>
